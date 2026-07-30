@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="StyleTech Store: tienda virtual de ropa y accesorios tecnológicos con pedidos por WhatsApp y pago contra entrega.">
+  <meta name="theme-color" content="#0d6efd">
+  <title>StyleTech Store | Ropa y tecnología</title>
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header" id="inicio">
+    <div class="container nav-wrap">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+        <img src="assets/images/logo-styletech.svg" alt="StyleTech Store">
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+        Menú
+      </button>
+
+      <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#promociones">Promociones</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <button class="cart-button" type="button" id="open-cart">
+        Carrito <strong id="cart-count">0</strong>
+      </button>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Tienda virtual de moda y tecnología</span>
+          <h1>Productos para tu estilo y para tu día a día</h1>
+          <p>
+            En StyleTech Store reunimos ropa urbana y accesorios tecnológicos en un catálogo
+            sencillo, con precios claros, atención directa y pedidos por WhatsApp.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#catalogo">Ver catálogo</a>
+            <a class="button button-secondary js-whatsapp" href="#" data-message="Hola, quiero conocer el catálogo de StyleTech Store.">Consultar por WhatsApp</a>
+          </div>
+          <div class="hero-details">
+            <span>Pago contra entrega</span>
+            <span>Entrega coordinada</span>
+            <span>Atención personalizada</span>
+          </div>
+        </div>
+
+        <div class="hero-products" aria-label="Productos destacados de StyleTech Store">
+          <figure class="hero-product hero-product-main">
+            <img src="assets/images/productos/camiseta-urban.png" alt="Camiseta Urban negra de StyleTech Store">
+          </figure>
+          <figure class="hero-product hero-product-top">
+            <img src="assets/images/productos/audifonos-bluetooth.png" alt="Audífonos Bluetooth negros de StyleTech Store">
+          </figure>
+          <figure class="hero-product hero-product-bottom">
+            <img src="assets/images/productos/smartwatch-fit.png" alt="Smartwatch Fit negro de StyleTech Store">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="service-strip" aria-label="Información de compra">
+      <div class="container service-grid">
+        <article>
+          <strong>Atención directa</strong>
+          <p>Resolvemos tus preguntas y confirmamos la disponibilidad por WhatsApp.</p>
+        </article>
+        <article>
+          <strong>Pago al recibir</strong>
+          <p>El método habilitado en este prototipo es efectivo contra entrega.</p>
+        </article>
+        <article>
+          <strong>Entrega coordinada</strong>
+          <p>El lugar y el costo del domicilio se acuerdan antes de confirmar el pedido.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section categories" aria-labelledby="categorias-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Categorías</span>
+            <h2 id="categorias-title">Explora el catálogo</h2>
+          </div>
+          <p>Selecciona una categoría para ver únicamente los productos relacionados.</p>
+        </div>
+
+        <div class="category-grid">
+          <button class="category-card" type="button" data-category-filter="ropa">
+            <span class="category-number">01</span>
+            <strong>Ropa</strong>
+            <small>Camiseta Urban y Sudadera Tech</small>
+          </button>
+          <button class="category-card" type="button" data-category-filter="moda">
+            <span class="category-number">02</span>
+            <strong>Accesorios de moda</strong>
+            <small>Gorra StyleTech</small>
+          </button>
+          <button class="category-card" type="button" data-category-filter="tecnologia">
+            <span class="category-number">03</span>
+            <strong>Tecnología</strong>
+            <small>Audio, carga, protección y dispositivos</small>
+          </button>
+          <button class="category-card" type="button" data-category-filter="todos">
+            <span class="category-number">04</span>
+            <strong>Catálogo completo</strong>
+            <small>Consulta los ocho productos disponibles</small>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section catalog" id="catalogo" aria-labelledby="catalogo-title">
+      <div class="container">
+        <div class="section-heading catalog-heading">
+          <div>
+            <span class="eyebrow">StyleTech Store</span>
+            <h2 id="catalogo-title">Productos disponibles</h2>
+          </div>
+
+          <div class="catalog-tools">
+            <label class="search-box">
+              <span>Buscar</span>
+              <input id="product-search" type="search" placeholder="Nombre del producto" aria-label="Buscar producto">
+            </label>
+
+            <div class="filters" role="group" aria-label="Filtrar productos">
+              <button class="filter is-active" type="button" data-filter="todos">Todos</button>
+              <button class="filter" type="button" data-filter="ropa">Ropa</button>
+              <button class="filter" type="button" data-filter="moda">Moda</button>
+              <button class="filter" type="button" data-filter="tecnologia">Tecnología</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-grid" id="product-grid" aria-live="polite"></div>
+        <p class="empty-state" id="empty-state" hidden>No se encontraron productos con ese criterio.</p>
+      </div>
+    </section>
+
+    <section class="section promo" id="promociones">
+      <div class="container promo-grid">
+        <div>
+          <span class="eyebrow eyebrow-light">Promoción de lanzamiento</span>
+          <h2>Diez por ciento de descuento en la primera compra</h2>
+          <p>
+            La promoción se confirma al momento de realizar el pedido y está sujeta a
+            disponibilidad de los productos seleccionados.
+          </p>
+        </div>
+        <a class="button button-light js-whatsapp" href="#" data-message="Hola, quiero consultar la promoción de lanzamiento de StyleTech Store.">Consultar promoción</a>
+      </div>
+    </section>
+
+    <section class="section payment" aria-labelledby="pago-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Métodos de pago</span>
+            <h2 id="pago-title">Información clara antes de comprar</h2>
+          </div>
+          <p>En esta versión del proyecto solo se reciben pagos en efectivo contra entrega.</p>
+        </div>
+
+        <div class="payment-grid">
+          <article class="payment-card available">
+            <span class="status">Disponible</span>
+            <strong>Efectivo contra entrega</strong>
+            <p>El cliente paga cuando recibe el producto y verifica la entrega.</p>
+          </article>
+          <article class="payment-card">
+            <span class="status">Próximamente</span>
+            <strong>Tarjeta débito o crédito</strong>
+            <p>La integración con una pasarela de pago se plantea para una versión futura.</p>
+          </article>
+          <article class="payment-card">
+            <span class="status">Próximamente</span>
+            <strong>Transferencia digital</strong>
+            <p>Nequi, Daviplata y otros medios digitales todavía no están habilitados.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="nosotros">
+      <div class="container about-grid">
+        <div class="about-copy">
+          <span class="eyebrow">Sobre StyleTech Store</span>
+          <h2>Un prototipo construido a partir de una idea de emprendimiento</h2>
+          <p>
+            La tienda fue planteada para ofrecer ropa y accesorios tecnológicos desde un mismo
+            sitio web. Antes de organizar el catálogo se realizó una encuesta para conocer los
+            intereses de los posibles compradores, los medios de contacto preferidos y la forma
+            de entrega más conveniente.
+          </p>
+        </div>
+
+        <div class="data-grid">
+          <article><strong>20</strong><span>respuestas obtenidas</span></article>
+          <article><strong>65%</strong><span>mostró interés directo en comprar</span></article>
+          <article><strong>95%</strong><span>consideró importantes las fotografías reales</span></article>
+          <article><strong>70%</strong><span>prefirió la entrega a domicilio</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contacto">
+      <div class="container contact-grid">
+        <div>
+          <span class="eyebrow eyebrow-light">Contacto</span>
+          <h2>Consulta disponibilidad o realiza tu pedido</h2>
+          <p>
+            Completa los datos básicos. Al enviar el formulario se abrirá WhatsApp con el mensaje preparado.
+          </p>
+        </div>
+
+        <form class="contact-form" id="contact-form">
+          <label>
+            Nombre
+            <input type="text" id="contact-name" placeholder="Escribe tu nombre" required>
+          </label>
+          <label>
+            Producto de interés
+            <input type="text" id="contact-product" placeholder="Ejemplo: Audífonos Bluetooth" required>
+          </label>
+          <label>
+            Mensaje
+            <textarea id="contact-message" rows="4" placeholder="Escribe tu consulta"></textarea>
+          </label>
+          <button class="button button-primary" type="submit">Enviar consulta por WhatsApp</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <img src="assets/images/logo-styletech.svg" alt="StyleTech Store" class="footer-logo">
+        <p>Ropa y accesorios tecnológicos en un solo lugar.</p>
+      </div>
+      <div>
+        <strong>Navegación</strong>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#promociones">Promociones</a>
+        <a href="#nosotros">Nosotros</a>
+      </div>
+      <div>
+        <strong>Información</strong>
+        <a class="js-whatsapp" href="#" data-message="Hola, quiero recibir atención de StyleTech Store.">Atención por WhatsApp</a>
+        <span>Pago contra entrega</span>
+        <span>Prototipo académico</span>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>StyleTech Store <span id="year"></span></span>
+      <span>Desarrollado con HTML5, CSS3 y JavaScript</span>
+    </div>
+  </footer>
+
+  <button class="whatsapp-float js-whatsapp" type="button" data-message="Hola, quiero hacer un pedido en StyleTech Store.">
+    WhatsApp
+  </button>
+
+  <div class="drawer-backdrop" id="drawer-backdrop" hidden></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-labelledby="cart-title" aria-hidden="true">
+    <div class="cart-header">
+      <div>
+        <span class="eyebrow">Pedido</span>
+        <h2 id="cart-title">Carrito de compra</h2>
+      </div>
+      <button class="close-button" type="button" id="close-cart">Cerrar</button>
+    </div>
+
+    <div class="cart-items" id="cart-items"></div>
+    <p class="cart-empty" id="cart-empty">El carrito está vacío.</p>
+
+    <div class="cart-summary">
+      <div><span>Subtotal</span><strong id="cart-subtotal">$0</strong></div>
+      <small>El costo del domicilio se acuerda según la zona de entrega.</small>
+      <div class="payment-note">Método disponible: efectivo contra entrega.</div>
+      <button class="button button-primary button-block" type="button" id="checkout-whatsapp">Finalizar pedido por WhatsApp</button>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
