@@ -3,7 +3,7 @@
   Escribe el número con indicativo de país, sin el signo +, espacios ni guiones.
   Ejemplo para Colombia: 573001234567
 */
-const STORE_WHATSAPP = "";
+const STORE_WHATSAPP = "573151063929";
 
 const products = [
   {
